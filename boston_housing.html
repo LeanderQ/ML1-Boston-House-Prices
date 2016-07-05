@@ -1679,7 +1679,11 @@ IwAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<<<<<<< HEAD
+<p><strong>Answer: </strong> Max_depth=3 would be an appropriate maximum depth for the model.  Both the testing and training data points converge on a score of around 0.8 (training score starts high and decreases, testing score starts low and increases, as the number of datapoints increases).  This is a better score than depth=1, and depth 6 and 10 don't converge to the same point, suggesting model overfitting.  More training points could benefit the model in that the training and testing scores could converge further, but we are definitely seeing diminishing marginal returns (because the score lines are becoming flat) on additional points: I would say that they are not needed.</p>
+=======
 <p><strong>Answer: </strong> Max_depth=3 would be an appropriate maximum depth for the model.  Both the testing and training data points converge on a score of around 0.8.  This is a better score than depth=1, and depth 6 and 10 don't converge to the same point, suggesting model overfitting.</p>
+>>>>>>> origin/master
 
 </div>
 </div>
@@ -2217,7 +2221,11 @@ EYkpSnwiIhJTlPhERCSmKPGJiEhMUeITEZGYosQnIiIx5f8DxOJ8lR0kkxYAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<<<<<<< HEAD
+<p><strong>Answer: </strong> I would choose depth=3, because it represents the biggest gains against bias without getting too high a variance; these gains can be seen by the validation score increasing substantially between max depth 2 and max depth 3, but a much smaller gain between 3 and 4.  Also, when we move from 3 to 4, the gap between the training and validation score increases, suggesting we are starting to overfit the model (the distance between the red and green lines).</p>
+=======
 <p><strong>Answer: </strong> I would choose depth=3, because it represents the biggest gains against bias without getting too high a variance.  Depth = 4 would be another valid answer because, while we do see variance increase vs 3, the width of the uncertainty still includes the possibility that we are improving bias without increase variance too much. Much past 4, that becomes less likely.</p>
+>>>>>>> origin/master
 
 </div>
 </div>
@@ -2248,7 +2256,11 @@ EYkpSnwiIhJTlPhERCSmKPGJiEhMUeITEZGYosQnIiIx5f8DxOJ8lR0kkxYAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<<<<<<< HEAD
+<p><strong>Answer: </strong>  Grid search is an exhaustive search method (it tests every possible combination of the parameters, i.e. a cartesian product of all specified parameter sets) for tuning model parameters, such as maximum depth or the number of training points in the above example; other examples would be the degree of the polynomial used in curve fitting or the number of knots in a spline approximation.  The grid search iterates through the possibilities, rather than testing them all at once.When combined with a quantitative metric (such as model forecast error or an information criterion), you can automate the search for 'optimal' parameters.</p>
+=======
 <p><strong>Answer: </strong>  Grid search is an exhaustive search method for tuning model parameters, such as maximum depth or the number of training points in the above example; other examples would be the degree of the polynomial used in curve fitting or the number of knots in a spline approximation.  When combined with a quantitative metric (such as model forecast error or an information criterion), you can automate the search for 'optimal' parameters.  I use quotes here because, unless the granularity of the search is fairly fine, you could miss a true optimum point (in the case of a continuous parameter).</p>
+>>>>>>> origin/master
 
 </div>
 </div>
@@ -2304,7 +2316,11 @@ EYkpSnwiIhJTlPhERCSmKPGJiEhMUeITEZGYosQnIiIx5f8DxOJ8lR0kkxYAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
+<<<<<<< HEAD
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+=======
 <div class="prompt input_prompt">In&nbsp;[19]:</div>
+>>>>>>> origin/master
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import &#39;make_scorer&#39;, &#39;DecisionTreeRegressor&#39;, and &#39;GridSearchCV&#39;</span>
@@ -2323,7 +2339,11 @@ EYkpSnwiIhJTlPhERCSmKPGJiEhMUeITEZGYosQnIiIx5f8DxOJ8lR0kkxYAAAAASUVORK5CYII=
 
     <span class="c1"># TODO: Create a dictionary for the parameter &#39;max_depth&#39; with a range from 1 to 10</span>
     <span class="c1">#use of np.arange recommended from http://stackoverflow.com/questions/31161637/grid-search-cross-validation-in-sklearn</span>
+<<<<<<< HEAD
+    <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;max_depth&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)}</span> <span class="c1">#note to self: arange produces a set [x,y) rather than the expected [x,y]</span>
+=======
     <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;max_depth&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)}</span>
+>>>>>>> origin/master
 
     <span class="c1"># TODO: Transform &#39;performance_metric&#39; into a scoring function using &#39;make_scorer&#39; </span>
     <span class="n">scoring_fnc</span> <span class="o">=</span> <span class="n">make_scorer</span><span class="p">(</span><span class="n">performance_metric</span><span class="p">)</span>
@@ -2401,7 +2421,11 @@ EYkpSnwiIhJTlPhERCSmKPGJiEhMUeITEZGYosQnIiIx5f8DxOJ8lR0kkxYAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<<<<<<< HEAD
+<p><strong>Answer: </strong> This code produces a max_depth of 5 (compared to 3 from eyeballing in question 6).  This isn't far enough off that I would be concerned that my code is wrong.</p>
+=======
 <p><strong>Answer: </strong> This code produces a max_depth of 5 (compared to 3 or 4, from eyeballing in question 6).  This isn't far enough off that I would be concerned that my code is wrong.</p>
+>>>>>>> origin/master
 
 </div>
 </div>
